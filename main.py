@@ -31,10 +31,10 @@ def load_investor_details(investor):
         st.pyplot(fig)
 
     with col2:
-        vertical_ser = df[df['investors'].str.contains(investor, na=False)].groupby('vertical')['amount'].sum()
+        vertical_serial = df[df['investors'].str.contains(investor, na=False)].groupby('vertical')['amount'].sum()
         st.subheader('Invested sectors')
         fig1, ax1 = plt.subplots()
-        ax1.pie(vertical_ser, labels=vertical_ser.index, autopct="0.01f%%")
+        ax1.pie(vertical_serial, labels=vertical_serial.index, autopct="0.01f%%")
 
         st.pyplot(fig1)
 
